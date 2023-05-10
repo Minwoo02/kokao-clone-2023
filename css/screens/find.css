@@ -102,3 +102,26 @@
   padding: 10px 0px;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+.open-post__photo:hover {
+  cursor: pointer;
+}
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__photo:hover i {
+  animation: heartBeat 1s linear infinite;
+}

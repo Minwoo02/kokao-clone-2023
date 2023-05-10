@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 500vh;
 }
 
 .status-bar__color {
@@ -11,10 +11,22 @@
   margin-left: 15px;
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -24,6 +36,38 @@
   font-size: 14px;
   border-radius: 25px;
   margin-bottom: 25px;
+}
+
+@keyframes fadeInChatLeft {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInChatRight {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat .message-row:nth-child(2) {
+  animation: fadeInChatLeft 0.8s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.main-chat .message-row:nth-child(3) {
+  animation: fadeInChatRight 0.8s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .message-row {
@@ -87,9 +131,10 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 5px 25px;
+  padding: 5px 15px;
   align-items: center;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -107,21 +152,22 @@
 
 .reply input {
   padding: 9px;
-  width: 100%;
+  width: 95%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
-  right: -15px;
+  right: 12px;
   top: 2px;
 }
 
 .reply__column:last-child > i {
-  right: 30px;
-  top: 16px;
+  right: 55px;
+  top: 17px;
 }
 
 .reply__column button {
@@ -130,6 +176,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column button i {
@@ -139,4 +186,27 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-face-laugh-wink {
+  transition: all 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child {
+  opacity: 0;
+}
+
+.reply:focus-within button,
+.reply:focus-within .fa-face-laugh-wink {
+  transform: translateY(-120px);
+}
+
+.reply input:focus {
+  width: 90vw;
+  transform: translateX(-10%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }

@@ -1,3 +1,8 @@
+.screen-header__icons span:hover {
+  cursor: pointer;
+  color: black;
+}
+
 .screen-header {
   position: fixed;
   display: flex;
@@ -31,4 +36,17 @@
   position: absolute;
   bottom: 25px;
   left: 120px;
+}
+
+@keyframes rotateGear {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateGear 3s ease-in-out infinite;
 }
