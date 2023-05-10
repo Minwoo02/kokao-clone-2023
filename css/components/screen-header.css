@@ -25,3 +25,9 @@
   bottom: 25px;
   left: 70px;
 }
+
+.screen-header__dot2 {
+  position: absolute;
+  bottom: 25px;
+  left: 120px;
+}
