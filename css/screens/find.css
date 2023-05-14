@@ -31,6 +31,10 @@
   align-items: center;
 }
 
+.open-chat:last-child .open-post {
+  margin-bottom: 100px;
+}
+
 .open-post__title {
   font-weight: 600;
   margin-bottom: 10px;

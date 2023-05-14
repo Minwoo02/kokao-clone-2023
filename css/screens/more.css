@@ -11,7 +11,7 @@
 .more-suggestions {
   margin-top: 50px;
   border-top: var(--main-border);
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .more-suggestions__title {
@@ -29,9 +29,17 @@
   align-items: center;
 }
 
+.more-suggestions__icon span {
+  text-align: center;
+}
+
 .more-suggestions__icon {
   cursor: pointer;
   color: black;
+}
+
+.more-suggestions__icon:last-child {
+  margin-bottom: 100px;
 }
 
 .more-suggestions__icon-image {
