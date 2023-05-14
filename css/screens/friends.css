@@ -14,16 +14,24 @@
 
 .friends-screen {
   padding: 0px var(--horizontal-space);
+  height: 100vh;
+  overflow-y: scroll;
+  /* height, overflow-y, -webkit-scollbar splash-screen 스크롤 문제 해결 */
+}
+
+.friends-screen::-webkit-scrollbar {
+  width: 0px;
+  /* 스크롤바 전체 width 0으로 */
 }
 
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: var(--main-border);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 15px;
 }
 
 .friends-screen__channel-header {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +45,7 @@
   to {
     opacity: 0;
     visibility: hidden;
+    /* 사라지는 것이 아니기 때문에 마우스 걸리지않게 */
   }
 }
 
@@ -50,7 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 80px;
+  font-size: 50px;
   animation: hideSplashScreen 0.4s ease-in-out forwards;
   animation-delay: 2s;
 }

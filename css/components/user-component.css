@@ -23,7 +23,7 @@
 
 .user-component__subtitle {
   margin-top: 8px;
-  font-size: 17px;
+  font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -58,6 +58,14 @@
   display: block;
 }
 
-.user-component:nth-child(n+1) {
-  margin-top: 25px;
+.user-component__chats:nth-child(n + 1) {
+  margin-top: 20px;
+}
+
+.user-component__chats:last-child {
+  margin-bottom: 100px;
+}
+
+.user-component__chats:hover {
+  cursor: pointer;
 }
