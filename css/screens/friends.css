@@ -25,9 +25,9 @@
 }
 
 .friends-screen__channel {
-  margin-top: 25px;
+  margin-top: 15px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 15px;
+  padding-top: 13px;
 }
 
 .friends-screen__channel-header {
@@ -36,6 +36,7 @@
   justify-content: space-between;
   align-items: center;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
 }
 
 @keyframes hideSplashScreen {
