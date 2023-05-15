@@ -38,7 +38,7 @@
   margin-bottom: 25px;
 }
 
-@keyframes fadeInChatLeft {
+/* @keyframes fadeInChatLeft {
   from {
     transform: translateX(-20px);
   }
@@ -46,7 +46,7 @@
     transform: none;
     opacity: 1;
   }
-}
+} */
 
 @keyframes fadeInChatRight {
   from {
@@ -58,13 +58,13 @@
   }
 }
 
-.main-chat .message-row:nth-child(2) {
+/* .main-chat .message-row:nth-child(n) {
   animation: fadeInChatLeft 0.8s forwards;
   animation-delay: 0.5s;
   opacity: 0;
-}
+} */
 
-.main-chat .message-row:nth-child(3) {
+.main-chat .message-row:nth-child(n) {
   animation: fadeInChatRight 0.8s forwards;
   animation-delay: 0.5s;
   opacity: 0;
